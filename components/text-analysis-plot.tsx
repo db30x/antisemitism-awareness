@@ -1,7 +1,11 @@
 "use client"
 
-import { useEffect, useRef } from 'react'
-import Plotly from 'plotly.js-dist'
+import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
+
+const Plot = dynamic(() => import("react-plotly.js"), {
+  ssr: false,
+});
 
 // Word lists for analysis
 const threatWords = new Set(['kill', 'murder', 'death', 'die', 'threat', 'attack', 'terror', 'bomb', 'shoot', 'exterminate', 'destroy'])
@@ -109,15 +113,15 @@ const layout = {
     },
     xaxis: {
       title: 'Days Since Event',
-      type: 'linear'
+      type: 'linear' as const
     },
     yaxis: {
       title: 'Description Length',
-      type: 'linear'
+      type: 'linear' as const
     },
     zaxis: {
       title: 'Quote Length',
-      type: 'linear',
+      type: 'linear' as const,
       range: [0, 1000] // Default range, will be updated in useEffect
     }
   },
@@ -136,25 +140,26 @@ const layout = {
             '  - Gray: Neutral or mixed categories',
       x: 0.02,
       y: 0.98,
-      xref: 'paper',
-      yref: 'paper',
+      xref: 'paper' as const,
+      yref: 'paper' as const,
       showarrow: false,
       font: {
         size: 12,
         color: '#666'
       },
-      align: 'left'
+      align: 'left' as const
     }
   ]
 }
 
 export default function TextAnalysisPlot() {
-  const plotRef = useRef<HTMLDivElement>(null)
+  const [isClient, setIsClient] = useState(false);
+  const [plotData, setPlotData] = useState<any>(null);
 
   useEffect(() => {
-    const element = plotRef.current
-    if (!element) return
-
+    setIsClient(true);
+    
+    // Load and process the CSV data
     fetch('/jewdata.csv')
       .then(response => response.text())
       .then(csv => {
@@ -205,7 +210,7 @@ export default function TextAnalysisPlot() {
         const maxQuoteLength = Math.max(...filteredData.map(d => d.quoteLength))
         layout.scene.zaxis.range = [0, maxQuoteLength] as [number, number]
 
-        const plotData = {
+        setPlotData({
           x: filteredData.map(d => d.daysSince),
           y: filteredData.map(d => d.totalLength),
           z: filteredData.map(d => d.quoteLength),
@@ -229,21 +234,28 @@ export default function TextAnalysisPlot() {
             `Quote: "${d.quote}"`
           ),
           hoverinfo: 'text'
-        }
-
-        Plotly.newPlot(element, [plotData], layout, {
-          responsive: true,
-          displayModeBar: false
         })
       })
       .catch(error => {
         console.error('Error loading CSV:', error)
       })
-  }, [])
+  }, []);
+
+  if (!isClient || !plotData) {
+    return <div className="w-full h-[600px] bg-slate-100 animate-pulse rounded-lg" />;
+  }
 
   return (
-    <div className="w-full h-[600px] rounded-xl bg-white p-4 shadow-lg">
-      <div ref={plotRef} className="w-full h-full" />
-    </div>
-  )
+    <Plot
+      data={[plotData]}
+      layout={layout}
+      config={{
+        responsive: true,
+        displayModeBar: false,
+        scrollZoom: true,
+      }}
+      className="w-full h-[600px]"
+      useResizeHandler={true}
+    />
+  );
 } 
