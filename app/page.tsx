@@ -13,12 +13,36 @@ import MovingTextBar from "@/components/moving-text-bar"
 import ScrollingTicker from "@/components/scrolling-ticker"
 import { allTweets } from "@/lib/all-tweets"
 import TextAnalysisPlot from "@/components/text-analysis-plot"
+import dynamic from "next/dynamic"
+import PlotlyChart from "@/components/plotly-chart"
 
 // Function to get random tweets
 function getRandomTweets(count: number = 4): string[] {
   const shuffled = [...allTweets].sort(() => 0.5 - Math.random())
   return shuffled.slice(0, count)
 }
+
+// Add the getCategoryColor function
+function getCategoryColor(category: string): string {
+  switch (category) {
+    case "threats":
+      return "#EF4444";
+    case "slurs":
+      return "#3B82F6";
+    case "profanity":
+      return "#F97316";
+    default:
+      return "#94A3B8";
+  }
+}
+
+// Add sample data for the plot
+const sampleData = [
+  { sentiment: -0.5, engagement: 50, impact: 30, category: "threats", text: "Sample threat" },
+  { sentiment: 0.2, engagement: 70, impact: 40, category: "slurs", text: "Sample slur" },
+  { sentiment: -0.8, engagement: 60, impact: 50, category: "profanity", text: "Sample profanity" },
+  { sentiment: 0.1, engagement: 40, impact: 20, category: "neutral", text: "Sample neutral" },
+];
 
 export default function Home() {
   const [tweets, setTweets] = useState<string[]>([])
@@ -474,7 +498,7 @@ export default function Home() {
                   Statistical Research
                 </span>
                 <br />
-                <span className="text-2xl md:text-3xl text-blue-300">Coming Soon</span>
+                <span className="text-2xl md:text-3xl text-blue-300">Coming April 2025</span>
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-300">
                 Leveraging advanced AI and data analytics to uncover deeper insights into antisemitic patterns and trends. Publishing April 2025.
