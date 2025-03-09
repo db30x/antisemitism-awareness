@@ -14,5 +14,6 @@ export const allTweets = [
     "https://twitter.com/That_Kazoo_Kid/status/1898520004980551885?ref_src=twsrc%255Etfw",
     "https://twitter.com/BucknerSr49425/status/1898499844584464500?ref_src=twsrc%255Etfw",
     "https://twitter.com/jobas6a/status/1898514906976243800?ref_src=twsrc%255Etfw",
+    "https://twitter.com/jobas6a/status/1898514906976243800?ref_src=twsrc%255Etfw"
   ]
   
