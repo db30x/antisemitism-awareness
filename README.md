@@ -1,4 +1,4 @@
-# Antisemitism Awareness Project
+# AntisemitismExists
 
 A data-driven web application dedicated to raising awareness about antisemitism in our digital world. The project tracks, documents, and visualizes antisemitic content to combat hate and promote understanding.
 

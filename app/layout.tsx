@@ -6,7 +6,7 @@ import { Toaster } from 'sonner'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Antisemitism Awareness',
+  title: 'AntisemitismExists',
   description: 'Raising awareness about antisemitism in our digital world',
 }
 
