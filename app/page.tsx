@@ -140,16 +140,11 @@ export default function Home() {
             <div className="absolute -bottom-2 left-0 w-full h-1 bg-blue-600"></div>
           </span>
         </h1>
+
         <p className="mt-8 max-w-3xl text-xl text-slate-600 md:text-2xl leading-relaxed">
-          A project dedicated to raising awareness about the persistent reality of antisemitism in our digital world. We
-          track, document, and expose antisemitic content to combat hate and promote understanding.{' '}
-          <a 
-            href="https://forms.google.com" 
-            className="text-blue-600 hover:text-blue-700 font-medium underline decoration-2 underline-offset-4 hover:decoration-blue-400 transition-colors"
-          >
-            Submit antisemitic content for documentation →
-          </a>
+          Antisemitism is real—not a distant issue. We gather daily examples of hateful language from social platforms to expose its persistence and use data-driven insights to drive solutions for change.
         </p>
+
         <div className="mt-6 flex items-center gap-4">
           <div className="inline-flex items-center gap-3 rounded-lg bg-red-50 p-4 text-red-700 border border-red-200 shadow-sm hover:shadow-md transition-shadow">
             <AlertTriangle className="h-5 w-5 flex-shrink-0 text-red-500" />
@@ -162,7 +157,7 @@ export default function Home() {
 
       {/* Main Content */}
       <section className="container mx-auto mt-16 grid gap-8 px-4 md:grid-cols-5 lg:gap-12">
-        {/* Antisemites of Shame Section */}
+        {/* Documented Hate Speech Section */}
         <div className="md:col-span-3">
           <div className="rounded-2xl bg-white p-6 shadow-lg hover:shadow-xl transition-shadow">
             <div className="mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
@@ -172,7 +167,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                   </svg>
                 </div>
-                <h2 className="text-2xl font-bold">Documented Hate Speech</h2>
+                <h2 className="text-2xl font-bold">Daily Hate Exposed</h2>
               </div>
               <div className="flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-800 shadow-sm">
                 <Clock className="h-4 w-4 text-blue-600" />
@@ -222,72 +217,184 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Statistics Section */}
+        {/* How You Can Help Section */}
         <div className="md:col-span-2">
           <div className="rounded-2xl bg-white p-6 shadow-lg hover:shadow-xl transition-shadow">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center">
-                <svg className="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
+                <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
                 </svg>
               </div>
-              <h2 className="text-2xl font-bold">Antisemitic Hate Crime Statistics</h2>
+              <h2 className="text-2xl font-bold">How You Can Help</h2>
             </div>
 
-            <div className="space-y-6">
-              {isLoading ? (
-                <div className="text-center py-8">Loading statistics...</div>
-              ) : statistics ? (
-                <>
-                  <StatisticsCard
-                    title="Reported Incidents"
-                    value={statistics.totalIncidents}
-                    change={statistics.yearOverYearChange.totalIncidents}
-                    period="vs last year"
-                    description="Total antisemitic incidents reported in 2021"
-                  />
+            <div className="space-y-4">
+              {/* Main Call to Action */}
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-xl p-6 border border-blue-100">
+                <h3 className="text-lg font-semibold text-blue-900 mb-3">Submit Content</h3>
+                <p className="text-blue-800 text-lg leading-relaxed mb-6">
+                  If you see antisemitic posts or comments, please share them with us. Your submissions help document antisemitism and drive meaningful change through data and awareness.
+                </p>
+                <a 
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdgf5KFGak5SMKmVdD_iK8O5DXZ-rDdPV-2sFwv_3bdgQtEkQ/viewform?usp=dialog" 
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors font-medium text-sm group"
+                >
+                  Submit Content for Documentation
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
 
-                  <StatisticsCard
-                    title="Online Harassment"
-                    value={statistics.onlineHarassment}
-                    change={statistics.yearOverYearChange.onlineHarassment}
-                    period="vs last year"
-                    description="Percentage of incidents occurring online"
-                    formatValue={(v) => `${v}%`}
-                  />
-
-                  <StatisticsCard
-                    title="Physical Assaults"
-                    value={statistics.physicalAssaults}
-                    change={statistics.yearOverYearChange.physicalAssaults}
-                    period="vs 2020"
-                    description="Violent antisemitic attacks in 2021"
-                  />
-
-                  <div className="rounded-xl bg-gradient-to-r from-slate-800 to-slate-900 p-6 text-white shadow-lg hover:shadow-xl transition-shadow">
-                    <h3 className="text-lg font-medium flex items-center gap-2">
-                      <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      Did you know?
-                    </h3>
-                    <p className="mt-3 text-slate-300 leading-relaxed">
-                      Antisemitic content online has increased by 500% on certain platforms since October 2023.
-                    </p>
+              {/* Impact Stats */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-slate-50 rounded-xl p-4 hover:bg-slate-100 transition-colors">
+                  <div className="flex items-center gap-2 text-blue-600 mb-2">
+                    <div className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></div>
+                    <span className="text-sm font-medium">Real-time Updates</span>
                   </div>
-                </>
-              ) : (
-                <div className="text-center py-8">Failed to load statistics</div>
-              )}
+                  <p className="text-slate-600 text-sm">Your submissions are processed and added to our database immediately</p>
+                </div>
+                <div className="bg-slate-50 rounded-xl p-4 hover:bg-slate-100 transition-colors">
+                  <div className="flex items-center gap-2 text-purple-600 mb-2">
+                    <div className="w-2 h-2 rounded-full bg-purple-600 animate-pulse delay-150"></div>
+                    <span className="text-sm font-medium">Data Analysis</span>
+                  </div>
+                  <p className="text-slate-600 text-sm">We analyze submissions using natural language processing to identify hate speech patterns</p>
+                </div>
+              </div>
+
+              {/* Additional Ways to Help */}
+              <div className="rounded-xl bg-gradient-to-r from-slate-800 to-slate-900 p-6 text-white">
+                <h3 className="text-lg font-medium flex items-center gap-2 mb-4">
+                  <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Other Ways to Help
+                </h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-blue-400 text-sm">1</span>
+                    </div>
+                    <p className="text-slate-300 text-sm">Share our findings with your network to raise awareness</p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-blue-400 text-sm">2</span>
+                    </div>
+                    <p className="text-slate-300 text-sm">Report antisemitic content on social media platforms</p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-blue-400 text-sm">3</span>
+                    </div>
+                    <p className="text-slate-300 text-sm">Check our website regularly for updated research findings and analysis</p>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Statistics Section */}
+      <section className="container mx-auto mt-12 px-4">
+        <div className="rounded-2xl bg-white p-8 shadow-lg">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+              <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900">Antisemitic Hate Crime Statistics</h2>
+              <p className="text-slate-600 mt-1">Tracking incidents and trends across platforms</p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {isLoading ? (
+              <div className="text-center py-8 col-span-full">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+                <p className="mt-4 text-slate-600">Loading latest statistics...</p>
+              </div>
+            ) : statistics ? (
+              <>
+                <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl p-6 border border-slate-200 hover:shadow-lg transition-shadow">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
+                      <svg className="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-lg font-semibold text-slate-900">Reported Incidents</h3>
+                  </div>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-3xl font-bold text-slate-900">{statistics.totalIncidents}</span>
+                    <span className="text-red-600">+{statistics.yearOverYearChange.totalIncidents}%</span>
+                  </div>
+                  <p className="mt-2 text-slate-600 text-sm">Total antisemitic incidents reported in 2021</p>
+                </div>
+
+                <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl p-6 border border-slate-200 hover:shadow-lg transition-shadow">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                      <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-lg font-semibold text-slate-900">Online Harassment</h3>
+                  </div>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-3xl font-bold text-slate-900">{statistics.onlineHarassment}%</span>
+                    <span className="text-blue-600">+{statistics.yearOverYearChange.onlineHarassment}%</span>
+                  </div>
+                  <p className="mt-2 text-slate-600 text-sm">Percentage of incidents occurring online</p>
+                </div>
+
+                <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl p-6 border border-slate-200 hover:shadow-lg transition-shadow">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center">
+                      <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-lg font-semibold text-slate-900">Physical Assaults</h3>
+                  </div>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-3xl font-bold text-slate-900">{statistics.physicalAssaults}</span>
+                    <span className="text-purple-600">+{statistics.yearOverYearChange.physicalAssaults}%</span>
+                  </div>
+                  <p className="mt-2 text-slate-600 text-sm">Violent antisemitic attacks in 2021</p>
+                </div>
+
+                <div className="col-span-full mt-6 bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-xl p-6 border border-blue-200">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                      <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-lg font-semibold text-blue-900">Critical Insight</h3>
+                  </div>
+                  <p className="text-blue-800 leading-relaxed">
+                    Antisemitic content online has increased by <span className="font-semibold">500%</span> on certain platforms since October 2023, highlighting the urgent need for continued monitoring and response.
+                  </p>
+                </div>
+              </>
+            ) : (
+              <div className="text-center py-8 col-span-full">
+                <p className="text-slate-600">Unable to load statistics. Please try again later.</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
       {/* Modern Section Divider */}
-      <div className="w-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 py-20 mt-16 relative overflow-hidden">
+      <div className="w-full bg-gradient-to-r from-blue-900 via-blue-950 to-blue-950 py-20 mt-16 relative overflow-hidden">
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           }} />
@@ -297,30 +404,31 @@ export default function Home() {
         <div className="container mx-auto px-4 relative">
           <div className="text-center">
             <h2 className="text-5xl font-bold text-white tracking-tight mb-6 animate-fade-in">
-              Data Drives Change
+              How to Help Fix This?
+              <span className="text-blue-100 block mt-2">Data.</span>
             </h2>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
-              Through data analysis and visualization, we can better understand and combat antisemitism in our digital world.
+            <p className="text-lg text-blue-200 max-w-2xl mx-auto leading-relaxed">
+              Through systematic data collection and analysis, we transform individual incidents into actionable insights, enabling targeted responses to combat antisemitism effectively.
             </p>
-            <div className="mt-8 flex justify-center gap-6">
+            <div className="mt-8 flex justify-center gap-8">
               <div className="flex items-center gap-2 text-blue-100">
                 <div className="w-2 h-2 rounded-full bg-blue-300 animate-pulse"></div>
-                <span>Real-time Analysis</span>
+                <span>Document</span>
               </div>
               <div className="flex items-center gap-2 text-blue-100">
                 <div className="w-2 h-2 rounded-full bg-blue-300 animate-pulse delay-150"></div>
-                <span>Pattern Recognition</span>
+                <span>Analyze</span>
               </div>
               <div className="flex items-center gap-2 text-blue-100">
                 <div className="w-2 h-2 rounded-full bg-blue-300 animate-pulse delay-300"></div>
-                <span>Data-Driven Insights</span>
+                <span>Act</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Decorative Elements */}
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-300/20 to-transparent"></div>
       </div>
 
       {/* Text Analysis Section */}
