@@ -1,13 +1,15 @@
 export const allTweets = [
-  "https://twitter.com/Yamothayaheard/status/1897044211327025295?ref_src=twsrc%5Etfw",
-  "https://twitter.com/MyWenisGenius12/status/1897231486904090932?ref_src=twsrc%5Etfw",
-  "https://twitter.com/ZGill11/status/1897489375539102042?ref_src=twsrc%5Etfw",
-  "https://twitter.com/RobertoCof60765/status/1897418988419772493?ref_src=twsrc%255Etfw",
-  "https://twitter.com/Mossadiczoos/status/1897288648342823181?ref_src=twsrc%255Etfw",
-  "https://twitter.com/seedoilcrusader/status/1897085172434317676?ref_src=twsrc%255Etfw",
-  "https://twitter.com/Alisondaqueen2/status/1897377048982962256?ref_src=twsrc%255Etfw",
-  "https://twitter.com/causticxhollow/status/1897462824647250223?ref_src=twsrc%255Etfw",
+    "https://twitter.com/whostolemynames/status/1898504508059046103?ref_src=twsrc%255Etfw",
+    "https://twitter.com/BucknerSr49425/status/1898504405294444904?ref_src=twsrc%255Etfw",
+    "https://twitter.com/Cold_Brewd/status/1898504385048793599?ref_src=twsrc%255Etfw",
+    "https://twitter.com/Bluerocksun/status/1898504133336088579?ref_src=twsrc%255Etfw",
+    "https://twitter.com/BasedHarun/status/1898504021515866413?ref_src=twsrc%255Etfw",
+    "https://twitter.com/NIMBYSREVENGE/status/1898504592922382408?ref_src=twsrc%255Etfw",
+    "https://twitter.com/jesusbpuertv/status/1898519698448241006?ref_src=twsrc%255Etfw",
+    "https://twitter.com/CallanRodg71759/status/1898497471644586128?ref_src=twsrc%255Etfw",
+    "https://twitter.com/GARYBARRY228042/status/1898475881334485297?ref_src=twsrc%255Etfw",
+    "https://twitter.com/Raiders47USA/status/1898264480640876812?ref_src=twsrc%255Etfw",
+    "https://twitter.com/pnotholt/status/1898093213170192484?ref_src=twsrc%255Etfw",
+    "https://twitter.com/NoHolocaustHoax/status/1897988235319513235?ref_src=twsrc%255Etfw",
+  ]
   
-  // Add more tweet URLs here
-] 
-
