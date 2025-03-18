@@ -1,0 +1,50 @@
+"Jews are evil"
+"Kill all Jews"
+"Holocaust hoax"
+"Holocaust denial"
+"Hitler was right"
+"Holohoax"
+("Zionist Occupied Government" OR ZOG)
+"Jewish conspiracy"
+"Zionist conspiracy"
+("Jewish bankers" OR "Jewish finance")
+"Jewish media control"
+"Jewish globalists"
+"Protocols of the Elders of Zion"
+"Jewish puppet masters"
+"Jewish infiltration"
+"Zionist agenda"
+"Jewish takeover"
+"Jewish supremacists"
+"Jewish problem"
+(Jewish OR Jews) (vermin OR parasites)
+"Gas the Jews"
+"Jewish diaspora" "problem"
+"blood libel"
+"Synagogue of Satan"
+("Holocaust never happened" OR "Holocaust didn't happen")
+"Fake Holocaust"
+("Rothschilds rule" OR "Rothschild conspiracy")
+"Jewish privilege"
+("Judeo-Bolshevism" OR "Judeo Bolshevik")
+"Jewish question" -filter:retweets
+("Talmud teaches hate" OR "Talmud is evil")
+("George Soros" "puppet" OR "Soros puppet")
+("Globalist Jews" OR "Zionist globalists")
+("Jewish infiltration" -filter:links)
+"Jewish cabal"
+("They run Hollywood" AND Jews)
+"Jewish pedophiles"
+("Zionism is racism" OR "Zionism = racism")
+("Israel = Nazis" OR "Israel is Nazi")
+("Jewish mother" joke) -filter:replies
+("Soros Jews" OR "Soros is evil")
+("Jewish Soros")
+"Talmudic conspiracies"
+("Jewish bankers" AND "world control")
+"International Jew"
+("Jewish infiltration" AND "Western world")
+"Jewish takeover" -filter:media
+("Jewish supremacists" AND "white genocide")
+"Hitler" (praise OR hero)
+"Jewish control" (government OR media)
