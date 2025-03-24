@@ -1,5 +1,5 @@
-"Jews are evil"
-"Kill all Jews"
+"Jews are evil" https://x.com/search?q=Jews%20are%20evil&src=typed_query&f=live
+"Kill all Jews" https://x.com/search?q=Kill%20all%20Jews&src=typed_query&f=live 
 "Holocaust hoax"
 "Holocaust denial"
 "Hitler was right"
