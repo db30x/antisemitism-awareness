@@ -14,7 +14,7 @@ import ScrollingTicker from "@/components/scrolling-ticker"
 import { allTweets } from "@/lib/all-tweets"
 import TextAnalysisPlot from "@/components/text-analysis-plot"
 import dynamic from "next/dynamic"
-import PlotlyChart from "@/components/plotly-chart"
+import { NLPSection } from "@/components/nlp-section"
 
 // Function to get random tweets
 function getRandomTweets(count: number = 4): string[] {
@@ -430,6 +430,9 @@ export default function Home() {
         {/* Decorative Elements */}
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-300/20 to-transparent"></div>
       </div>
+
+      {/* NLP Section */}
+      <NLPSection />
 
       {/* Text Analysis Section */}
       <section className="container mx-auto mt-12 px-4">
