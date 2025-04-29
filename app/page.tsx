@@ -609,10 +609,10 @@ export default function Home() {
                   Statistical Research
                 </span>
                 <br />
-                <span className="text-2xl md:text-3xl text-blue-300">Coming May 2025</span>
+                <span className="text-2xl md:text-3xl text-blue-300">Coming June 2025</span>
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-300">
-                Leveraging advanced AI and data analytics to uncover deeper insights into antisemitic patterns and trends. Publishing May 2025.
+                Leveraging advanced AI and data analytics to uncover deeper insights into antisemitic patterns and trends. Publishing June 2025.
               </p>
 
               {/* Contact Section */}
